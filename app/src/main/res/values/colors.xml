@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Original Starting Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+
+
+    <!-- New Theme Colors -->
+    <color name="blue_light">#1DC7F2</color>
+    <color name="blue_med">#1DA1F2</color>
+    <color name="blue_dark">#1C5ECF</color>
+    <color name="blue_dark2">#1D40F2</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey_light">#DEE5EA</color>
+    <color name="grey_med">#AAB7C1</color>
+    <color name="grey_dark">#6A7B8A</color>
+
+    <color name="black_light">#262B30</color>
+    <color name="black_med">#15181B</color>
+    <color name="black">#FF000000</color>
+
+</resources>

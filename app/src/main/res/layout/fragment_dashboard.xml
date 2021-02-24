@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="dashboardViewModel"
+            type="com.example.clockout.fragments.dashboard.DashboardViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.dashboard.DashboardFragment">
+
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="8dp"
+            app:dayofweekImage="@{dashboardViewModel.entry}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_saturday" />
+
+        <TextView
+            android:id="@+id/detail_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="@dimen/double_margin"
+            android:layout_marginEnd="8dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:dateFormatted="@{dashboardViewModel.entry}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_image"
+            tools:text="June 10, 2020" />
+
+        <TextView
+            android:id="@+id/start_time_text"
+            style="@style/LeftTextView"
+            android:text="@string/start_text"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/detail_start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_start" />
+
+
+        <Button
+            android:id="@+id/detail_start"
+            style="@style/RightTextView"
+            android:layout_marginTop="@dimen/double_margin"
+            android:onClick="@{()-> dashboardViewModel.onStartTimeClick()}"
+            app:clockInTimeFormatted="@{dashboardViewModel.entry}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_date"
+            tools:text="8:00 AM" />
+
+        <TextView
+            android:id="@+id/lunch_start_time_text"
+            style="@style/LeftTextView"
+            android:text="@string/start_break_text"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/detail_lunchin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_lunchin" />
+
+        <Button
+            android:id="@+id/detail_lunchin"
+            style="@style/RightTextView"
+            android:onClick="@{()->dashboardViewModel.onLunchStartClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_start"
+            app:lunchInTimeFormatted="@{dashboardViewModel.entry}"
+            tools:text="12:00 PM" />
+
+        <TextView
+            android:id="@+id/lunch_end_time_text"
+            style="@style/LeftTextView"
+            android:text="@string/end_break_text"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/detail_lunchout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_lunchout" />
+
+        <Button
+            android:id="@+id/detail_lunchout"
+            style="@style/RightTextView"
+            android:onClick="@{()->dashboardViewModel.onLunchEndClick()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_lunchin"
+            app:lunchOutTimeFormatted="@{dashboardViewModel.entry}"
+            tools:text="12:30 PM" />
+
+        <TextView
+            android:id="@+id/end_time_text"
+            style="@style/LeftTextView"
+            android:text="@string/end_text"
+            android:textSize="@dimen/detail_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/detail_end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/detail_end" />
+
+        <Button
+            android:id="@+id/detail_end"
+            style="@style/RightTextView"
+            android:onClick="@{()->dashboardViewModel.onEndTimeClick()}"
+            app:clockOutTimeFormatted="@{dashboardViewModel.entry}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_lunchout"
+            tools:text="5:00 PM" />
+
+        <TextView
+            android:id="@+id/total_hours_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_margin"
+            android:text="@string/total_hours"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/end_time_text" />
+
+        <TextView
+            android:id="@+id/detail_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/double_margin"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/total_hours_text"
+            app:totalHoursFormatted="@{dashboardViewModel.entry}"
+            tools:text="7.00" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/clock_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:enabled="@{dashboardViewModel.clockButtonVisible}"
+            android:onClick="@{() -> dashboardViewModel.onClockPress()}"
+            android:text="@{dashboardViewModel.clockButtonText}"
+            app:layout_constraintBottom_toTopOf="@id/lunch_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Clock In" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/lunch_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:enabled="@{dashboardViewModel.lunchButtonVisible}"
+            android:onClick="@{() -> dashboardViewModel.onLunchPress()}"
+            android:text="@{dashboardViewModel.lunchButtonText}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Start Break" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

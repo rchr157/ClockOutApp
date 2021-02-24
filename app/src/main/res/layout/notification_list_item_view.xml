@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="entry"
+            type="com.example.clockout.database.TimeCardEntry"/>
+        <variable
+            name="clickListener"
+            type="com.example.clockout.fragments.notifications.NotificationsListener" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> clickListener.onClick(entry)}">
+
+        <ImageView
+            android:id="@+id/clock_image"
+            android:layout_width="@dimen/icon_size"
+            android:layout_height="45dp"
+            android:layout_marginStart="@dimen/double_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/date_field"
+            app:layout_constraintBottom_toBottomOf="@id/total_hours_field"
+            app:dayofweekImage="@{entry}"
+            tools:srcCompat="@drawable/icon"/>
+
+        <TextView
+            android:id="@+id/date_field"
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/double_margin"
+            android:layout_marginTop="@dimen/double_margin"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:dateFormatted="@{entry}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clock_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Date of Entry" />
+
+        <TextView
+            android:id="@+id/start_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/start_text"
+            app:layout_constraintStart_toStartOf="@id/date_field"
+            app:layout_constraintTop_toBottomOf="@id/date_field"/>
+
+        <TextView
+            android:id="@+id/start_time_field"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/double_margin"
+            app:layout_constraintEnd_toEndOf="@id/date_field"
+            app:layout_constraintStart_toEndOf="@id/start_text"
+            app:layout_constraintTop_toBottomOf="@id/date_field"
+            app:clockInTimeFormatted="@{entry}"
+            tools:text="--:--:-- AM"/>
+
+        <TextView
+            android:id="@+id/end_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/end_text"
+            app:layout_constraintStart_toStartOf="@id/date_field"
+            app:layout_constraintTop_toBottomOf="@id/start_time_field"/>
+
+        <TextView
+            android:id="@+id/end_time_field"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            app:layout_constraintEnd_toEndOf="@id/start_time_field"
+            app:layout_constraintStart_toStartOf="@id/start_time_field"
+            app:layout_constraintTop_toBottomOf="@id/start_time_field"
+            app:clockOutTimeFormatted="@{entry}"
+            tools:text="--:--:-- PM"/>
+
+        <TextView
+            android:id="@+id/total_hours_field"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="@dimen/single_margin"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/end_time_field"
+            app:layout_constraintStart_toStartOf="@id/end_text"
+            app:layout_constraintTop_toBottomOf="@id/end_time_field"
+            app:totalHoursFormatted="@{entry}"
+            tools:text="Total Hours: 0.0" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="@dimen/double_margin"
+            app:layout_constraintTop_toBottomOf="@id/total_hours_field"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

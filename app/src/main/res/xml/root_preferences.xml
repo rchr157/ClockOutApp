@@ -1,0 +1,60 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/pay_period_header">
+
+        <ListPreference
+            android:title="@string/pay_period_type_header"
+            android:summary="@string/pay_period_type_summary"
+            app:defaultValue="Bi-Weekly"
+            app:entries="@array/pay_period_type_titles"
+            app:entryValues="@array/pay_period_type_values"
+            app:key="pay_period_type"
+            app:useSimpleSummaryProvider="true" />
+
+        <com.example.clockout.fragments.dialog_fragments.DatePickerPreference
+            android:title="@string/pay_period_day_header"
+            android:key="pay_period_start"
+            android:summary="@string/pay_period_day_summary"
+            app:useSimpleSummaryProvider="true"/>
+
+        <EditTextPreference
+            android:title="@string/pay_period_goal_header"
+            android:summary="@string/pay_period_goal_summary"
+            android:singleLine="true"
+            android:inputType="number"
+            app:key="hour_goals"
+            app:useSimpleSummaryProvider="true"/>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/reminder_header">
+
+        <MultiSelectListPreference
+            android:title="@string/workday_header"
+            android:summary="@string/workday_summary"
+            app:entries="@array/workday_titles"
+            app:entryValues="@array/workday_values"
+            app:key="working_days" />
+
+        <com.example.clockout.fragments.dialog_fragments.TimePickerPreference
+            android:key="reminder_clock_in"
+            android:title="@string/reminder_clock_in"
+            android:summary="No Reminder Set"
+            android:defaultValue="80"
+            app:key="reminder_clock_in"
+            app:useSimpleSummaryProvider="true"
+            />
+        <com.example.clockout.fragments.dialog_fragments.TimePickerPreference
+            android:key="reminder_clock_out"
+            android:title="@string/reminder_clock_out"
+            android:summary="No Reminder Set"
+            android:defaultValue="1080"
+            app:key="reminder_clock_out"
+            app:useSimpleSummaryProvider="true"
+            />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

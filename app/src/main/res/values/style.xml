@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    &lt;!&ndash; Style for Detailed View&ndash;&gt;-->
+<!--    <style name="DetailLeftTimeTextView" parent="TextAppearance.AppCompat">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginStart">@dimen/triple_margin</item>-->
+<!--        <item name="android:textSize">@dimen/detail_text_size</item>-->
+<!--        <item name="android:textColor">@color/grey_med</item>-->
+<!--    </style>-->
+<!--    <style name="DetailRightTimeTextView" parent="Widget.MaterialComponents.Button.OutlinedButton">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+
+<!--        <item name="android:textAppearance">?attr/textAppearanceButton</item>-->
+<!--        <item name="backgroundTint">@android:color/transparent</item>-->
+<!--        <item name="strokeColor">?attr/colorSecondary</item>-->
+<!--        <item name="strokeWidth">1dp</item>-->
+
+<!--        <item name="android:layout_marginEnd">@dimen/triple_margin</item>-->
+<!--        <item name="android:layout_marginTop">4dp</item>-->
+<!--        <item name="android:textSize">@dimen/detail_text_size</item>-->
+<!--        <item name="android:textColor">@color/blue_med</item>-->
+<!--        <item name="boxBackgroundColor">@color/grey_light</item>-->
+<!--    </style>-->
+
+<!--    &lt;!&ndash; Style for Dashboard View &ndash;&gt;-->
+<!--    <style name="DashboardLeftTextView" parent="TextAppearance.AppCompat">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+<!--        <item name="android:layout_marginStart">@dimen/triple_margin</item>-->
+<!--        <item name="android:textSize">@dimen/detail_text_size</item>-->
+<!--        <item name="android:textColor">@color/grey_med</item>-->
+<!--    </style>-->
+<!--    <style name="DashboardRightTextView" parent="Widget.MaterialComponents.Button.OutlinedButton">-->
+<!--        <item name="android:layout_width">wrap_content</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+
+<!--        <item name="android:textAppearance">?attr/textAppearanceButton</item>-->
+<!--        <item name="backgroundTint">@android:color/transparent</item>-->
+<!--        <item name="strokeColor">?attr/colorSecondary</item>-->
+<!--        <item name="strokeWidth">1dp</item>-->
+
+<!--        <item name="android:layout_marginEnd">@dimen/triple_margin</item>-->
+<!--        <item name="android:layout_marginTop">4dp</item>-->
+<!--        <item name="android:textSize">@dimen/detail_text_size</item>-->
+<!--        <item name="android:textColor">@color/blue_med</item>-->
+<!--        <item name="boxBackgroundColor">@color/grey_light</item>-->
+<!--    </style>-->
+
+    <!-- Style for Time Entry Text View -->
+    <style name="LeftTextView" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/triple_margin</item>
+        <item name="android:textSize">@dimen/detail_text_size</item>
+        <item name="android:textColor">@color/grey_med</item>
+    </style>
+    <style name="RightTextView" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+        <item name="android:textAppearance">?attr/textAppearanceButton</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">?attr/colorSecondary</item>
+        <item name="strokeWidth">1dp</item>
+
+        <item name="android:layout_marginEnd">@dimen/triple_margin</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:textSize">@dimen/detail_text_size</item>
+        <item name="android:textColor">@color/blue_med</item>
+        <item name="boxBackgroundColor">@color/grey_light</item>
+    </style>
+
+    <style name="IconButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">?attr/colorSecondary</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+</resources>

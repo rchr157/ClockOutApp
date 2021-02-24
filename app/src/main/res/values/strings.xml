@@ -1,0 +1,128 @@
+<resources>
+    <string name="app_name">Clock Out</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Today</string>
+    <string name="title_notifications">History</string>
+    <string name="title_details">Details</string>
+    <string name="title_settings">Settings</string>
+    <string name="title_about">About</string>
+
+    <!-- Time Text Strings -->
+    <string name="start_text">Start Work: </string>
+    <string name="start_break_text">Start Break: </string>
+    <string name="end_break_text">End Break: </string>
+    <string name="end_text">End Work: </string>
+    <string name="total_hours">Total Hours:</string>
+
+    <!-- Button Text Strings -->
+    <string name="clock_in">Clock In</string>
+    <string name="clock_out">Clock Out</string>
+
+    <string name="lunch_start">Start Lunch Break</string>
+    <string name="lunch_end">End Lunch Break</string>
+
+    <string name="save_text">Save</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="add_button_text">+</string>
+    <string name="add_new_entry">Add New Entry</string>
+
+    <!-- About Strings -->
+    <string name="author_field">Author: rchr157</string>
+    <string name="icon_links">Icons obtained from flaticons.com | Icon artist - Freepik.</string>
+
+    <!-- Notification -->
+    <string name="reminder_notification_channel_id">Reminder</string>
+
+
+
+    <!-- Setting Strings -->
+    <string name="pay_period_header">Pay Period</string>
+    <string name="pay_period_type_header">Pay Period Type</string>
+    <string name="pay_period_type_summary">Choose Type of Pay Period</string>
+    <string-array name="pay_period_type_titles">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Bi-Weekly</item>
+        <item>Semi-Monthly</item>
+        <item>Monthly</item>
+        <item>Custom</item>
+    </string-array>
+    <string-array name="pay_period_type_values">
+        <item>1</item>
+        <item>7</item>
+        <item>14</item>
+        <item>15</item>
+        <item>30</item>
+        <item>Custom</item>
+    </string-array>
+
+    <string name="pay_period_day_header">Start of Pay Period</string>
+    <string name="pay_period_day_summary">Choose Date Pay Period Starts</string>
+    <string-array name="pay_period_day_titles">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    <string-array name="pay_period_day_values">
+        <item>7</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="pay_period_goal_header">Hours Per Pay Period</string>
+    <string name="pay_period_goal_summary">Goal for Hours Per Pay Period</string>
+
+    <string name="reminder_header">Reminder</string>
+
+    <string name="workday_header">Working Days</string>
+    <string name="workday_summary">Select Working Days for Reminder</string>
+    <string-array name="workday_titles">
+        <item>Sunday</item>
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+    </string-array>
+    <string-array name="workday_values">
+        <item>7</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string name="reminder_alarm_header">Set Reminders</string>
+    <string name="reminder_clock_in">Clock In Reminder</string>
+    <string name="reminder_clock_in_message">Don\'t Forget to Clock in to work</string>
+    <string name="reminder_clock_out">Clock Out Reminder</string>
+    <string name="reminder_clock_out_message">Don\'t Forget to Clock out of work</string>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>

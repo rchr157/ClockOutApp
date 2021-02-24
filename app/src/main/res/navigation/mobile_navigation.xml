@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.clockout.fragments.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.clockout.fragments.dashboard.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_notificationsDetailFragment"
+            app:destination="@id/notificationsDetailFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notifications"
+        android:name="com.example.clockout.fragments.notifications.NotificationsFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notifications_to_notificationsDetailFragment"
+            app:destination="@id/notificationsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsDetailFragment"
+        android:name="com.example.clockout.fragments.notifications_details.NotificationsDetailFragment"
+        android:label="DetailsFragment"
+        tools:layout="@layout/fragment_notifications_detail">
+        <argument
+            android:name="timeCardId"
+            app:argType="long"/>
+        <action
+            android:id="@+id/action_notificationsDetailFragment_to_notifications"
+            app:destination="@id/notifications" />
+        <action
+            android:id="@+id/action_notificationsDetailFragment_to_dashboard"
+            app:destination="@id/dashboard" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.clockout.fragments.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.clockout.fragments.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@xml/root_preferences" />
+
+</navigation>
