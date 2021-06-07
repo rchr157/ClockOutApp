@@ -28,7 +28,7 @@ You can clock out the same ways: Through buttons or through the time dialog boxe
 After clocking out, the app will calculate the amount of time worked.
 
 ## Break
-You can also include break time by using the "Start Break"/"End Brea" buttons or through the time dialog boxes.
+You can also include break time by using the "Start Break"/"End Break" buttons or through the time dialog boxes.
 
 ![Image of Lunch Break Start](https://github.com/rchr157/ClockOutApp/blob/master/screenshots/lunchbreak_in.JPG)
 ![Image of Lunch Break End](https://github.com/rchr157/ClockOutApp/blob/master/screenshots/lunchbreak_end.JPG)
